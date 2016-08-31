@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>p4</id>
+    <title>P4: Helix Command-Line Client</title>
+    <version>2016.1</version>
+    <authors>"Perforce Software, Inc."</authors>
+    <owners>caskater4</owners>
+    <summary>p4</summary>
+    <description>The P4 command-line client provides access to all Perforce features and functions as an interface for scripting and automated operations.</description>
+    <projectUrl>http://www.perforce.com/perforce/products/p4.html</projectUrl>
+    <tags>admin p4 helix perforce</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.perforce.com/downloads/terms-use</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>https://www.perforce.com/perforce/doc.current/user/relnotes.txt</releaseNotes>
+	<docsUrl>https://www.perforce.com/perforce/doc.current/manuals/p4guide/</docsUrl>
+	<mailingListUrl>https://www.perforce.com/support-services</mailingListUrl>
+	<packageSourceUrl>https://github.com/caskater4/ChocoPackages/tree/master/p4</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>visualassist</id>
+    <title>Visual Assist</title>
+    <version>2076.0</version>
+    <authors>Whole Tomato Software</authors>
+    <owners>caskater4</owners>
+    <summary>Visual Assist</summary>
+    <description>Visual Assist is a Visual Studio extension - a productivity tool for refactoring, reading, writing, navigating and generating C / C++ / C# code.  Note: This is commercial software. For those without a valid activation key installing this software will begin a 30 day trial.</description>
+    <projectUrl>http://www.wholetomato.com/</projectUrl>
+    <tags>visual assist studio C++ C C# tools</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.wholetomato.com/purchase/agreement.asp</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>http://support.wholetomato.com/default.asp?W404#2076</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

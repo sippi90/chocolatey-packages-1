@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>p4v</id>
+    <title>P4V: Visual Client</title>
+    <version>2015.2.0.20160831</version>
+    <authors>"Perforce Software, Inc."</authors>
+    <owners>caskater4</owners>
+    <summary>p4v</summary>
+    <description>The Perforce Visual Client provides access to versioned files managed on a Perforce Server through a graphical interface and also includes tools for merging and visualizing code evolution.</description>
+    <projectUrl>http://www.perforce.com/product/components/perforce_visual_client</projectUrl>
+    <tags>admin p4 p4v perforce</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.perforce.com/downloads/terms-use</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>https://www.perforce.com/perforce/doc.current/user/p4vnotes.txt</releaseNotes>
+	<docsUrl>https://www.perforce.com/perforce/doc.current/manuals/p4v/</docsUrl>
+	<mailingListUrl>https://www.perforce.com/support-services</mailingListUrl>
+	<packageSourceUrl>https://github.com/caskater4/ChocoPackages/tree/master/p4v</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
