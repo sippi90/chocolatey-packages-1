@@ -17,6 +17,7 @@
 	<docsUrl>https://www.perforce.com/perforce/doc.current/manuals/p4v/</docsUrl>
 	<mailingListUrl>https://www.perforce.com/support-services</mailingListUrl>
 	<packageSourceUrl>https://github.com/caskater4/ChocoPackages/tree/master/p4v</packageSourceUrl>
+	<iconUrl>https://github.com/caskater4/chocolatey-packages/raw/master/icons/p4v.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
