@@ -3,7 +3,7 @@
   <metadata>
     <id>visualassist</id>
     <title>Visual Assist</title>
-    <version>2076.0</version>
+    <version>10.9.2108</version>
     <authors>Whole Tomato Software</authors>
     <owners>caskater4</owners>
     <summary>Visual Assist</summary>
@@ -13,7 +13,7 @@
     <copyright></copyright>
     <licenseUrl>http://www.wholetomato.com/purchase/agreement.asp</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>http://support.wholetomato.com/default.asp?W404#2076</releaseNotes>
+    <releaseNotes>http://support.wholetomato.com/default.asp?W404</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
