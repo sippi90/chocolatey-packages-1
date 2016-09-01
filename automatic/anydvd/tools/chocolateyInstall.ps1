@@ -1,7 +1,19 @@
 ﻿$packageName = 'anydvd'
-$installerType = 'EXE'
-$url = 'https://www.redfox.bz/download/SetupAnyDVD.exe'
-$silentArgs = '/S'
-$validExitCodes = @(0)
- 
-Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url"  -validExitCodes $validExitCodes
+$url32 = 'https://www.redfox.bz/download/SetupAnyDVD8040.exe'
+$url64 = 'https://www.redfox.bz/download/SetupAnyDVD8040.exe'
+$checksum32  = ''
+$checksum64  = ''
+
+$packageArgs = @{
+  packageName    = $packageName
+  installerType	 = 'EXE'
+  url            = $url32
+  url64Bit       = $url64
+  checksum       = $checksum32
+  checksum64     = $checksum64
+  checksumType   = 'sha256'
+  checksumType64 = 'sha256'
+  silentArgs	 = '/S'
+}
+
+Install-ChocolateyPackage @packageArgs
