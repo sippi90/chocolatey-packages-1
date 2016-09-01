@@ -3,7 +3,7 @@
   <metadata>
     <id>teamspeak</id>
     <title>TeamSpeak</title>
-    <version>3.0.19</version>
+    <version>3.0.19.4</version>
     <authors>"TeamSpeak Systems GmbH"</authors>
     <owners>caskater4</owners>
     <summary>TeamSpeak Client</summary>
@@ -13,10 +13,11 @@
     <copyright></copyright>
     <licenseUrl>http://www.teamspeak.com/?page=eula</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>http://forum.teamspeak.com/threads/123437-Beta-Channel-TeamSpeak-3-Client-3-0-19</releaseNotes>
+    <releaseNotes>http://forum.teamspeak.com/forums/91-Latest-News</releaseNotes>
 	<docsUrl>https://support.teamspeakusa.com/index.php?/Knowledgebase/List/Index/10/english</docsUrl>
 	<mailingListUrl>http://forum.teamspeak.com/</mailingListUrl>
-	<packageSourceUrl>https://github.com/caskater4/ChocoPackages/tree/master/teamspeak</packageSourceUrl>
+	<packageSourceUrl>https://github.com/caskater4/chocolatey-packages/tree/master/automatic/teamspeak</packageSourceUrl>
+	<iconUrl>https://github.com/caskater4/chocolatey-packages/raw/master/icons/teamspeak.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
