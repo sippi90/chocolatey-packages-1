@@ -14,6 +14,10 @@
     <licenseUrl>http://www.wholetomato.com/purchase/agreement.asp</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>http://support.wholetomato.com/default.asp?W404</releaseNotes>
+	<docsUrl>http://www.wholetomato.com/docs/default.asp</docsUrl>
+	<mailingListUrl>http://www.wholetomato.com/support/default.asp</mailingListUrl>
+	<packageSourceUrl>https://github.com/caskater4/ChocoPackages/tree/master/visualassist</packageSourceUrl>
+	<iconUrl>https://github.com/caskater4/chocolatey-packages/raw/master/icons/visualassist.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
