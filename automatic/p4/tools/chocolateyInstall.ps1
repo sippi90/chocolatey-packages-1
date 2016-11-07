@@ -1,11 +1,16 @@
-﻿$packageName = 'p4'
-$url32 = 'http://filehost.perforce.com/perforce/r16.1/bin.ntx86/helix-p4-x86.exe'
-$url64 = 'http://filehost.perforce.com/perforce/r16.1/bin.ntx64/helix-p4-x64.exe'
-$checksum32  = 'e8b0047a04c53183d704ece9e9be95887720e7dadca7527e95d0db025b8c0301'
-$checksum64  = '5d3fe5a6912aebfd721b6a8a06205cc2743a9551afd6de201641179121394a75'
+﻿$ErrorActionPreference = 'Stop';
+
+$packageName = 'p4'
+$toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url32       = 'http://filehost.perforce.com/perforce/r16.1/bin.ntx86/helix-p4-x86.exe'
+$url64       = 'http://filehost.perforce.com/perforce/r16.1/bin.ntx64/helix-p4-x64.exe'
+$checksum32  = 'B66FE09D472E1532559E56602814F6423B6F65ABEE0B30AA3E314663DE870B80'
+$checksum64  = '0CCD52CE74874503ED537C6D44050C551BC16392F09B782EE88EDF17F0589EE5'
 
 $packageArgs = @{
   packageName    = $packageName
+  softwareName   = 'Helix P4 Command-Line Client*'
+  unzipLocation  = $toolsDir
   installerType	 = 'EXE'
   url            = $url32
   url64Bit       = $url64
@@ -14,6 +19,7 @@ $packageArgs = @{
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
   silentArgs	 = '/s /v"/qn"'
+  validExitCodes = @(0)
 }
 
 Install-ChocolateyPackage @packageArgs
