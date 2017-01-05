@@ -1,8 +1,8 @@
 ﻿$packageName = 'p4'
-$url32 = 'http://filehost.perforce.com/perforce/r16.1/bin.ntx86/helix-p4-x86.exe'
-$url64 = 'http://filehost.perforce.com/perforce/r16.1/bin.ntx64/helix-p4-x64.exe'
-$checksum32  = 'e8b0047a04c53183d704ece9e9be95887720e7dadca7527e95d0db025b8c0301'
-$checksum64  = '5d3fe5a6912aebfd721b6a8a06205cc2743a9551afd6de201641179121394a75'
+$url32 = 'http://filehost.perforce.com/perforce/r16.2/bin.ntx86/helix-p4-x86.exe'
+$url64 = 'http://filehost.perforce.com/perforce/r16.2/bin.ntx64/helix-p4-x64.exe'
+$checksum32  = '68f427d34e8c3d8db6849ab157f31434f47c898e1c580964a6671b170a02a51c'
+$checksum64  = '48e41d15494f9e6a62f1412c17d7babee1fd10792eb884841f62f96cf621d41e'
 
 $packageArgs = @{
   packageName    = $packageName

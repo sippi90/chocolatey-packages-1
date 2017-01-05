@@ -1,8 +1,8 @@
 ﻿$packageName = 'p4v'
 $url32 = 'http://filehost.perforce.com/perforce/r15.2/bin.ntx86/p4vinst.exe'
 $url64 = 'http://filehost.perforce.com/perforce/r15.2/bin.ntx64/p4vinst64.exe'
-$checksum32  = '00e62fdf61cc29cfa34501c0d283a7e8e77df6f2859130b03c8cc1b43f1f7cf3'
-$checksum64  = 'c721af61aafdc9ee22352299b08807709147510753680b93a39e631288bc2f72'
+$checksum32  = '621d9688ae812201243ec71d3b3821998994b1b1642edb951d200506fde9204c'
+$checksum64  = '00e47df9a776c04eda863178edd62e21346877991c6c371444cb82f612bf23ac'
 
 $packageArgs = @{
   packageName    = $packageName

@@ -1,8 +1,8 @@
 ﻿$packageName = 'p4d'
-$url32 = 'http://filehost.perforce.com/perforce/r16.1/bin.ntx86/helix-versioning-engine-x86.exe'
-$url64 = 'http://filehost.perforce.com/perforce/r16.1/bin.ntx64/helix-versioning-engine-x64.exe'
-$checksum32  = '73f6b0adb0c422fe47d743bd247c494fd3748a0e5c4092e485ecae187e65b05e'
-$checksum64  = 'd3f59e9d384520a9427458d4cd5c1021f024db3ded04eeebe57911635c00fbf3'
+$url32 = 'http://filehost.perforce.com/perforce/r16.2/bin.ntx86/helix-versioning-engine-x86.exe'
+$url64 = 'http://filehost.perforce.com/perforce/r16.2/bin.ntx64/helix-versioning-engine-x64.exe'
+$checksum32  = '52497c531ade7cf4d94092ee3043ad4fec418b387a71673e5d07a39a8ce64585'
+$checksum64  = '3b3188ae54ce943f0b22aa014da4629caccd239eeea31d20479c7c63e803b187'
 
 $packageArgs = @{
   packageName    = $packageName
