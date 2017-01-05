@@ -1,6 +1,6 @@
 ﻿$packageName = 'visualassist'
-$url32 = 'https://www.wholetomato.com/downloads/getBuild.asp?2108'
-$url64 = 'https://www.wholetomato.com/downloads/getBuild.asp?2108'
+$url32 = 'https://www.wholetomato.com/downloads/getBuild.asp?2118'
+$url64 = 'https://www.wholetomato.com/downloads/getBuild.asp?2118'
 $checksum32  = ''
 $checksum64  = ''
 

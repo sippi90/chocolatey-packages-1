@@ -7,6 +7,7 @@ $x64Path = 'bin.ntx64'
 $checksumsFileName = 'SHA256SUMS'
 $x86FileName = 'helix-p4-x86.exe'
 $x64FileName = 'helix-p4-x64.exe'
+$forceUpdate = $au_Force
 
 function global:au_SearchReplace {
     @{
@@ -50,6 +51,11 @@ function global:au_GetLatest {
 		if ($found) {
 			$sum64 = $matches[0] -split ' ' | select -First 1
 		}
+		$result = Get-Content 'tools\chocolateyInstall.ps1' | Select-String "checksum32 = '$checksum32'" -quiet
+		if ($result) {
+			$forceUpdate = $True
+			Write-Host Checksum values have changed. Forcing update.
+		}
 		$Latest = @{ URL32 = $url32; Checksum32 = $sum32; URL64 = $url64; Checksum64 = $sum64; Version = $version }
 	} else {
 		Write-Host Version not found
@@ -58,4 +64,7 @@ function global:au_GetLatest {
     return $Latest
 }
 
+$origForce = $au_Force
+$au_Force = $forceUpdate
 update
+$au_Force = $origForce

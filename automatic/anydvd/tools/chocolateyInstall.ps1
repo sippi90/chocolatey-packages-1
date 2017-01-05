@@ -1,6 +1,6 @@
 ﻿$packageName = 'anydvd'
-$url32 = 'https://www.redfox.bz/download/SetupAnyDVD8040.exe'
-$url64 = 'https://www.redfox.bz/download/SetupAnyDVD8040.exe'
+$url32 = 'https://www.redfox.bz/download/SetupAnyDVD8090.exe'
+$url64 = 'https://www.redfox.bz/download/SetupAnyDVD8090.exe'
 $checksum32  = ''
 $checksum64  = ''
 
