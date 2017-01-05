@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>gnuwin32-tar.install</id>
+    <title>GnuWin32 Tar for Windows (Install)</title>
+    <version>1.13</version>
+    <authors>Jay Fenlason Richard E Salz Amy Gorin Francois Pinard Melissa Weisshaus Thomas Michael Innis Bushnell</authors>
+    <owners>caskater4</owners>
+    <summary>The GNU Tar program provides the ability to create tar archives, as well as various other kinds of manipulation.</summary>
+    <description>The GNU Tar program provides the ability to create tar archives, as well as various other kinds of manipulation. For example, you can use tar on previously created archives to extract files, to store additional files, or to update or list files which were already stored. The Win32 port can only create tar archives, but cannot pipe its output to other programs such as gzip or compress, and will not create tar.gz archives; you will have to use or simulate a batch pipe. BsdTar does have the ability to direcly create and manipulate .tar, .tar.gz, tar.bz2, .zip, .gz and .bz2 archives, understands the most-used options of GNU Tar, and is also much faster; for most purposes it is to be preferred to GNU Tar.</description>
+    <projectUrl>http://gnuwin32.sourceforge.net/packages/gtar.htm</projectUrl>
+    <tags>admin tar gnuwin32</tags>
+    <copyright>Copyright © 2005 Free Software Foundation, Inc.</copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>http://gnuwin32.sourceforge.net/packages/gtar.htm</releaseNotes>
+	<docsUrl>http://gnuwin32.sourceforge.net/install.html</docsUrl>
+	<mailingListUrl>http://gnuwin32.sourceforge.net/lists.html</mailingListUrl>
+	<packageSourceUrl>https://github.com/caskater4/chocolatey-packages/tree/master/manual/gnuwin32-tar.install</packageSourceUrl>
+	<iconUrl>https://github.com/caskater4/chocolatey-packages/raw/master/icons/gnu.png</iconUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
