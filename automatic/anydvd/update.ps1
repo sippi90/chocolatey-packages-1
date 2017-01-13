@@ -29,6 +29,15 @@ function global:au_GetLatest {
 		# Compute the path to the exe
 		$url32 = $url64 = $baseDownloadUrl + $shortVersion + '.exe'
 		
+		# Download the exe and compute an sha256
+		Write-Host Calculating SHA256 checksum...
+		$tmpFile = [System.IO.Path]::GetTempFileName()
+		wget -Uri $url32 -OutFile $tmpFile
+		$sum32 = Get-FileHash $tmpFile -Algorithm sha256
+		$sum32 = $sum64 = $sum32.Hash
+		rm $tmpFile
+		Write-Host SHA256: $sum32
+		
 		$Latest = @{ URL32 = $url32; Checksum32 = $sum32; URL64 = $url64; Checksum64 = $sum64; Version = $version }
 	} else {
 		Write-Host Version not found
