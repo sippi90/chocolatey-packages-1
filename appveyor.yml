@@ -23,16 +23,16 @@ environment:
     secure: 0dCx+PNq1xOOpSZKCHWpPg==
   github_pass:
     secure: JvCemjn3psS6QP2MU3PTN2UqkJWFmiMc4MxdXjlTjoJhtfwujplbNd3RmsfKX55I
-  github_user_repo: 'caskater4/chocolatey-packages'
+  github_user_repo: caskater4/chocolatey-packages
   
   # Email credentials - for error notifications
   mail_user:
     secure: /uWprUr9Dvi0kroGju3w4FLXqq/ec4JgAGQacpdV7Gg=
   mail_pass:
     secure: 88eP5u/fvdq8YhorwOOGzQugAsiyaflR4gdJE8Mkb/A=
-  mail_server: 'smtp.gmail.com'
-  mail_port: '587'
-  mail_enablessl: 'true'
+  mail_server: smtp.gmail.com
+  mail_port: 587
+  mail_enablessl: true
   
   # Chocolatey API key - to push updated packages
   api_key:
