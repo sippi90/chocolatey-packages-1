@@ -49,10 +49,10 @@ if ($env:au_force -eq 'true') {
   $options.Force = $true
 }
 
-cd $PSScriptRoot/../automatic
+cd $PSScriptRoot/automatic
 
 Update-AUPackages -Name $Name -Options $options | ft
-$global:updateall = Import-CliXML $PSScriptRoot\..\update_info.xml
+$global:updateall = Import-CliXML $PSScriptRoot\update_info.xml
 
 #Uncomment to fail the build on AppVeyor on any package error
 #if ($updateall.error_count.total) { throw 'Errors during update' }
