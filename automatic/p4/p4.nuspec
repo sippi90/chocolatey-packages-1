@@ -3,11 +3,7 @@
   <metadata>
     <id>p4</id>
     <title>P4: Helix Command-Line Client</title>
-<<<<<<< HEAD
     <version>2016.2</version>
-=======
-    <version>2016.1.0.20161108</version>
->>>>>>> 84d10bac98612919aed70d7c3c87c413fb8d3b0d
     <authors>"Perforce Software, Inc."</authors>
     <owners>caskater4</owners>
     <summary>p4</summary>
