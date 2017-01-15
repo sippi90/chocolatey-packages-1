@@ -2,8 +2,6 @@ import-module au
 
 $downloadsUrl = 'http://www.teamspeak.com/downloads'
 
-$exeUrlRegEx = '(?i)http://([a-zA-Z0-9\.-]+/?)+'
-
 function global:au_SearchReplace {
     @{
         'tools\chocolateyInstall.ps1' = @{
@@ -18,24 +16,27 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
 	$downloads = Invoke-WebRequest $downloadsUrl
 	
-	# All of the interesting information is contained in a div of class "uk-form uk-panel uk-panel-space windows"
-	$elements = $downloads.AllElements | Where Class -eq "uk-form uk-panel uk-panel-space windows" | Select -First 1
+	# All of the interesting information is contained in a div of class "platform windows"
+	$windowsElement = $downloads.ParsedHtml.getElementsByTagName("div") | Where{ $_.className -eq 'platform windows' }
+	# The windows div contains two more elements of class type 'row'. These are 32-bit and 64-bit respectively.
+	$rowElement = $windowsElement.getElementsByTagName("div") | Where{ $_.className -eq 'row' } | Select -First 1
+	$version = ($windowsElement.getElementsByTagName("span") | Where{ $_.className -eq 'version' } | Select -First 1).innerText.Trim()
 	
-	# The version number is given in a line like "Client 32-bit XX.XX.XX.XX"
-	$found = $elements.innerText -match 'Client.*[0-9]\.?'
-	$version = $matches[0] -split ' ' | Select -Last 1
+	# Get the 32-bit installer url and checksum
+	$checksum32 = ($rowElement.getElementsByTagName("div") | Where{ $_.className -eq 'checksum' } | Select -First 1).innerText
+	$url32 = ($rowElement.getElementsByTagName("a") | Select -First 1).getAttribute("href")
 	
-	# The sha256 checksums are on their own line; 32-bit first and then 64-bit.
+	# Get the 64-bit installer url and checksum
+	$rowElement = $windowsElement.getElementsByTagName("div") | Where{ $_.className -eq 'row' } | Select -Last 1
+	$checksum64 = ($rowElement.getElementsByTagName("div") | Where{ $_.className -eq 'checksum' } | Select -First 1).innerText
+	$url64 = ($rowElement.getElementsByTagName("a") | Select -First 1).getAttribute("href")
+	
+	# The sha256 checksums need to be parsed a bit
 	$regex = [regex] 'SHA256: [a-zA-Z0-9]+'
-	$matches = $regex.Matches($elements.innerText)
+	$matches = $regex.Matches($checksum32)
 	$sum32 = $matches[0] -split ' ' | Select -Last 1
+	$matches = $regex.Matches($checksum64)
 	$sum64 = $matches[1] -split ' ' | Select -Last 1
-	
-	# Extract the download URLs by looking for URL patterns
-	$regex = [regex] $exeUrlRegEx
-	$downloadUrls = $regex.Matches($elements.innerHTML)
-	$url32 = $downloadUrls -split ' ' | Select -First 1
-	$url64 = $downloadUrls -split ' ' | Select -Last 1
 
 	$Latest = @{ URL32 = $url32; Checksum32 = $sum32; URL64 = $url64; Checksum64 = $sum64; Version = $version }
     return $Latest
