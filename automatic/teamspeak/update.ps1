@@ -27,7 +27,7 @@ function global:au_GetLatest {
 	$url32 = ($rowElement.getElementsByTagName("a") | Select -First 1).getAttribute("href")
 	
 	# Get the 64-bit installer url and checksum
-	$rowElement = $windowsElement.getElementsByTagName("div") | Where{ $_.className -eq 'row' } | Select -Last 1
+	$rowElement = $windowsElement.getElementsByTagName("div") | Where{ $_.className -eq 'row' } | Select -Skip 1 | Select -First 1
 	$checksum64 = ($rowElement.getElementsByTagName("div") | Where{ $_.className -eq 'checksum' } | Select -First 1).innerText
 	$url64 = ($rowElement.getElementsByTagName("a") | Select -First 1).getAttribute("href")
 	
