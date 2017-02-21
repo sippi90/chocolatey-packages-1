@@ -36,7 +36,7 @@ function global:au_GetLatest {
 	$matches = $regex.Matches($checksum32)
 	$sum32 = $matches[0] -split ' ' | Select -Last 1
 	$matches = $regex.Matches($checksum64)
-	$sum64 = $matches[1] -split ' ' | Select -Last 1
+	$sum64 = $matches[0] -split ' ' | Select -Last 1
 
 	$Latest = @{ URL32 = $url32; Checksum32 = $sum32; URL64 = $url64; Checksum64 = $sum64; Version = $version }
     return $Latest
