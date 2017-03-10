@@ -3,13 +3,13 @@
   <metadata>
     <id>visualassist</id>
     <title>Visual Assist</title>
-    <version>10.9.2108</version>
+    <version>10.9.2210</version>
     <authors>Whole Tomato Software</authors>
     <owners>caskater4</owners>
     <summary>Visual Assist</summary>
     <description>Visual Assist is a Visual Studio extension - a productivity tool for refactoring, reading, writing, navigating and generating C / C++ / C# code.  Note: This is commercial software. For those without a valid activation key installing this software will begin a 30 day trial.</description>
     <projectUrl>http://www.wholetomato.com/</projectUrl>
-    <tags>visual assist studio C++ C C# tools</tags>
+    <tags>admin trial "visual assist" studio C++ C C# tools</tags>
     <copyright></copyright>
     <licenseUrl>http://www.wholetomato.com/purchase/agreement.asp</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
