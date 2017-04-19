@@ -16,7 +16,7 @@
     <releaseNotes>http://support.wholetomato.com/default.asp?W404</releaseNotes>
 	<docsUrl>http://www.wholetomato.com/docs/default.asp</docsUrl>
 	<mailingListUrl>http://www.wholetomato.com/support/default.asp</mailingListUrl>
-	<packageSourceUrl>https://github.com/caskater4/ChocoPackages/tree/master/visualassist</packageSourceUrl>
+	<packageSourceUrl>https://github.com/caskater4/chocolatey-packages/tree/master/automatic/visualassist</packageSourceUrl>
 	<iconUrl>https://github.com/caskater4/chocolatey-packages/raw/master/icons/visualassist.png</iconUrl>
   </metadata>
   <files>
