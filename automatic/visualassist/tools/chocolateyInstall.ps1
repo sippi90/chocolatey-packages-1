@@ -6,6 +6,7 @@ $checksum64 = ''
 
 $sargs = "/S"
 if ($env:VAX_licensee -And $env:VAX_license) {
+  $sargs	+= " /LU $env:VAX_licensee /LK $env:VAX_license"
 }
 
 $packageArgs = @{
