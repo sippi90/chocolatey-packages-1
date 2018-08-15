@@ -1,6 +1,8 @@
 import-module au
 
-$downloadsUrl = 'http://www.teamspeak.com/downloads'
+$baseName = 'TeamSpeak3-Client'
+$downloadsUrl = 'https://www.teamspeak.com/en/downloads'
+$mirror = 'http://dl.4players.de/ts/releases/'
 
 function global:au_SearchReplace {
     @{
@@ -17,19 +19,17 @@ function global:au_GetLatest {
 	$downloads = Invoke-WebRequest $downloadsUrl
 	
 	# All of the interesting information is contained in a div of class "platform windows"
-	$windowsElement = $downloads.ParsedHtml.getElementsByTagName("div") | Where{ $_.className -eq 'platform windows' }
+	$windowsElement = $downloads.ParsedHtml.getElementsByTagName("div") | Where{ $_.className -eq 'platform mb-5 windows' }
 	# The windows div contains two more elements of class type 'row'. These are 32-bit and 64-bit respectively.
-	$rowElement = $windowsElement.getElementsByTagName("div") | Where{ $_.className -eq 'row' } | Select -First 1
 	$version = ($windowsElement.getElementsByTagName("span") | Where{ $_.className -eq 'version' } | Select -First 1).innerText.Trim()
 	
-	# Get the 32-bit installer url and checksum
-	$checksum32 = ($rowElement.getElementsByTagName("div") | Where{ $_.className -eq 'checksum' } | Select -First 1).innerText
-	$url32 = ($rowElement.getElementsByTagName("a") | Select -First 1).getAttribute("href")
-	
 	# Get the 64-bit installer url and checksum
-	$rowElement = $windowsElement.getElementsByTagName("div") | Where{ $_.className -eq 'row' } | Select -Skip 1 | Select -First 1
-	$checksum64 = ($rowElement.getElementsByTagName("div") | Where{ $_.className -eq 'checksum' } | Select -First 1).innerText
-	$url64 = ($rowElement.getElementsByTagName("a") | Select -First 1).getAttribute("href")
+	$checksum64 = ($windowsElement.getElementsByTagName("div") | Where{ $_.className -eq 'checksum' } | Select -First 1).innerText
+	$url64 = $mirror + '/' + $version + '/' + $baseName + '-win64-' + $version + '.exe'
+	
+	# Get the 32-bit installer url and checksum
+	$checksum32 = ($windowsElement.getElementsByTagName("div") | Where{ $_.className -eq 'checksum' } | Select -Skip 1 | Select -First 1).innerText
+	$url32 = $mirror + '/' + $version + '/' + $baseName + '-win32-' + $version + '.exe'
 	
 	# The sha256 checksums need to be parsed a bit
 	$regex = [regex] 'SHA256: [a-zA-Z0-9]+'
