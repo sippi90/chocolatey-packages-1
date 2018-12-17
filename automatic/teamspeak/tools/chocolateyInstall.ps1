@@ -1,8 +1,8 @@
 ﻿$packageName = 'teamspeak'
-$url32 = 'http://dl.4players.de/ts/releases//3.2.1/TeamSpeak3-Client-win32-3.2.1.exe'
-$url64 = 'http://dl.4players.de/ts/releases//3.2.1/TeamSpeak3-Client-win64-3.2.1.exe'
-$checksum32  = '47ff32e6aa0dbc01a05b3e06660c5905952ddc55395cd4ee44eccffcdebc408c'
-$checksum64  = '49d6ad4d488699f76d600be264d487135db22a8b320d01c24c76698ac0fa1f34'
+$url32 = 'http://dl.4players.de/ts/releases//3.2.3/TeamSpeak3-Client-win32-3.2.3.exe'
+$url64 = 'http://dl.4players.de/ts/releases//3.2.3/TeamSpeak3-Client-win64-3.2.3.exe'
+$checksum32  = 'd89420f771183244e7c1f65fb4628ec48e739a2ff9ad87e6d05891daa2d579ef'
+$checksum64  = '64cdce5b680f8a310c969b6fb4046e43278d52300b1e69b19564f90ce79193ed'
 
 $packageArgs = @{
   packageName    = $packageName

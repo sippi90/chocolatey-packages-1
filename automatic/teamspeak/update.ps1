@@ -23,13 +23,13 @@ function global:au_GetLatest {
 	# The windows div contains two more elements of class type 'row'. These are 32-bit and 64-bit respectively.
 	$version = ($windowsElement.getElementsByTagName("span") | Where{ $_.className -eq 'version' } | Select -First 1).innerText.Trim()
 	
-	# Get the 64-bit installer url and checksum
-	$checksum64 = ($windowsElement.getElementsByTagName("div") | Where{ $_.className -eq 'checksum' } | Select -First 1).innerText
-	$url64 = $mirror + '/' + $version + '/' + $baseName + '-win64-' + $version + '.exe'
-	
 	# Get the 32-bit installer url and checksum
-	$checksum32 = ($windowsElement.getElementsByTagName("div") | Where{ $_.className -eq 'checksum' } | Select -Skip 1 | Select -First 1).innerText
+	$checksum32 = ($windowsElement.getElementsByTagName("div") | Where{ $_.className -eq 'checksum' } | Select -First 1).innerText
 	$url32 = $mirror + '/' + $version + '/' + $baseName + '-win32-' + $version + '.exe'
+	
+	# Get the 64-bit installer url and checksum
+	$checksum64 = ($windowsElement.getElementsByTagName("div") | Where{ $_.className -eq 'checksum' } | Select -Skip 1 | Select -First 1).innerText
+	$url64 = $mirror + '/' + $version + '/' + $baseName + '-win64-' + $version + '.exe'
 	
 	# The sha256 checksums need to be parsed a bit
 	$regex = [regex] 'SHA256: [a-zA-Z0-9]+'
