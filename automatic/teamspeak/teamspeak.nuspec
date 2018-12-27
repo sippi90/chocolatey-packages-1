@@ -8,7 +8,7 @@
     <owners>caskater4</owners>
     <summary>TeamSpeak Client</summary>
     <description>A Voice-Over-IP (VoIP) software developed primarily for gamers to communicate with one another.</description>
-    <projectUrl>http://www.teamspeak.com/?page=teamspeak3</projectUrl>
+    <projectUrl>https://www.teamspeak.com/en/</projectUrl>
     <tags>admin teamspeak team speak ts3 ts voip mumble ventrilo</tags>
     <copyright></copyright>
     <licenseUrl>http://www.teamspeak.com/?page=eula</licenseUrl>
