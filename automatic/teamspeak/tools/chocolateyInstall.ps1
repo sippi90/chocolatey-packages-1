@@ -1,4 +1,4 @@
-﻿$packageName = 'teamspeak'
+$packageName = 'teamspeak'
 $url32 = 'http://dl.4players.de/ts/releases//3.2.3/TeamSpeak3-Client-win32-3.2.3.exe'
 $url64 = 'http://dl.4players.de/ts/releases//3.2.3/TeamSpeak3-Client-win64-3.2.3.exe'
 $checksum32  = 'd89420f771183244e7c1f65fb4628ec48e739a2ff9ad87e6d05891daa2d579ef'
@@ -15,5 +15,7 @@ $packageArgs = @{
   checksumType64 = 'sha256'
   silentArgs	 = '/S'
 }
+
+New-Item "$env:temp\overwolfdummy" -ItemType Directory -Force
 
 Install-ChocolateyPackage @packageArgs
